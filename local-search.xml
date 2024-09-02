@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>Typora的使用</title>
+    <link href="/2024/09/02/Typora%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+    <url>/2024/09/02/Typora%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
+    
+    <content type="html"><![CDATA[<h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>不会用Typora所以用Typora写篇学习Typora的笔记（？）</p><h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>一级标题：Ctrl+1 或# </p><p>二级标题：Ctrl+2 或##</p><p>三级标题：Ctrl+3 或###</p><p>四级标题：Ctrl+4 或####</p><p>五级标题：Ctrl+5 或#####</p><p>六级标题：Ctrl+6 或######</p><p>注意：#后面要加一个空格键</p><h2 id="文字"><a href="#文字" class="headerlink" title="文字"></a>文字</h2><p>删除线：alt+shift+5</p><p>加粗：ctrl+B</p><p>斜体：ctrl+I</p><p>下划线：ctrl+U</p><p>高亮：&#x3D;&#x3D; &#x3D;&#x3D;</p><h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><p>“|”作竖线 “-”作横线</p><p>快捷键：ctrl + T</p><h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><p>这是&gt;一级引用   这是&gt;&gt; 二级引用</p><p>快捷键：ctrl shift+q</p><p>注意：&gt;后面要加一个空格键 引用必须位于一行的开头</p><h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><p>“-” + “空格键”</p><p>快捷键：ctrl+shift+]  </p><h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h3><p>“数字.” + “空格键”</p><p>快捷键：ctrl+shift+[ </p><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><h3 id="不确定语言"><a href="#不确定语言" class="headerlink" title="不确定语言"></a>不确定语言</h3><p>ctrl+shift+k</p><h3 id="确定语言"><a href="#确定语言" class="headerlink" title="确定语言"></a>确定语言</h3><p>`&#96;&#96; 语言名称</p><h2 id="跳转"><a href="#跳转" class="headerlink" title="跳转"></a>跳转</h2><h3 id="内部跳转–文件内跳转"><a href="#内部跳转–文件内跳转" class="headerlink" title="内部跳转–文件内跳转"></a>内部跳转–文件内跳转</h3><figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs scss"><span class="hljs-selector-attr">[提示文字]</span>(#路径) 如：<span class="hljs-selector-attr">[跳转到引用]</span>(#/image)<br>快捷键：CTRL+K<br></code></pre></td></tr></table></figure><h3 id="外部跳转–超链接"><a href="#外部跳转–超链接" class="headerlink" title="外部跳转–超链接"></a>外部跳转–超链接</h3><figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs scss"><span class="hljs-selector-attr">[提示文字]</span>(网址) 如：<span class="hljs-selector-attr">[百度]</span>(baidu.com)<br> 快捷键：CTRL+K<br></code></pre></td></tr></table></figure><h2 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h2><p>使用<code>&lt;&gt;</code>包括URL或邮箱地址会被自动转换为超链接</p><h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs scss">!<span class="hljs-selector-attr">[提示文字]</span>(图片地址) <br></code></pre></td></tr></table></figure><p>相对路径和绝对路径均可</p><h2 id="表情😉"><a href="#表情😉" class="headerlink" title="表情😉"></a>表情😉</h2><p>快捷键：“windows” + “;”</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>杂七杂八</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Typora</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>My First Blog</title>
     <link href="/2024/08/29/My-First-Blog/"/>
     <url>/2024/08/29/My-First-Blog/</url>
