@@ -19,26 +19,28 @@
   <meta name="author" content="SphiinX">
   <meta name="keywords" content="">
   
-    <meta name="description" content="写在前面不会用Typora所以用Typora写篇学习Typora的笔记（？） 正文标题一级标题：Ctrl+1 或#  二级标题：Ctrl+2 或## 三级标题：Ctrl+3 或### 四级标题：Ctrl+4 或#### 五级标题：Ctrl+5 或##### 六级标题：Ctrl+6 或###### 注意：#后面要加一个空格键 文字删除线：alt+shift+5 加粗：ctrl+B 斜体：ctrl+I">
+    <meta name="description" content="1.需求分析与接口设计产品原型：  接口设计：  数据库设计：  2.代码开发1.当前端传过来的数据跟我们已有的pojo的参数属性差别较大时，可以使用专门的DTO用来接收前端传过来的数据（此处资料中已提供，无需自行创建） 2.编写添加员工的Controller方法：在EmployeeController中新建一个方法save，传入参数employeeDTO来接收数据 1234567@PostMap">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Typora的使用">
-<meta property="og:url" content="http://example.com/2024/09/02/Typora%E7%9A%84%E4%BD%BF%E7%94%A8/index.html">
+<meta property="og:title" content="苍穹外卖学习笔记——新增员工需求">
+<meta property="og:url" content="http://example.com/2024/09/25/%E8%8B%8D%E7%A9%B9%E5%A4%96%E5%8D%96Day02%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="写在前面不会用Typora所以用Typora写篇学习Typora的笔记（？） 正文标题一级标题：Ctrl+1 或#  二级标题：Ctrl+2 或## 三级标题：Ctrl+3 或### 四级标题：Ctrl+4 或#### 五级标题：Ctrl+5 或##### 六级标题：Ctrl+6 或###### 注意：#后面要加一个空格键 文字删除线：alt+shift+5 加粗：ctrl+B 斜体：ctrl+I">
+<meta property="og:description" content="1.需求分析与接口设计产品原型：  接口设计：  数据库设计：  2.代码开发1.当前端传过来的数据跟我们已有的pojo的参数属性差别较大时，可以使用专门的DTO用来接收前端传过来的数据（此处资料中已提供，无需自行创建） 2.编写添加员工的Controller方法：在EmployeeController中新建一个方法save，传入参数employeeDTO来接收数据 1234567@PostMap">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://s2.loli.net/2024/09/03/AvNoaXP3S5YwuRI.png">
-<meta property="article:published_time" content="2024-09-02T10:02:37.000Z">
-<meta property="article:modified_time" content="2024-09-02T17:35:58.832Z">
+<meta property="og:image" content="https://s2.loli.net/2024/09/26/HkcgrVuz1vAe9LC.jpg">
+<meta property="article:published_time" content="2024-09-25T12:17:52.000Z">
+<meta property="article:modified_time" content="2024-09-26T03:16:24.786Z">
 <meta property="article:author" content="SphiinX">
-<meta property="article:tag" content="Typora">
+<meta property="article:tag" content="苍穹外卖">
+<meta property="article:tag" content="java">
+<meta property="article:tag" content="springboot">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://s2.loli.net/2024/09/03/AvNoaXP3S5YwuRI.png">
+<meta name="twitter:image" content="https://s2.loli.net/2024/09/26/HkcgrVuz1vAe9LC.jpg">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Typora的使用 - Hexo</title>
+  <title>苍穹外卖学习笔记——新增员工需求 - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -216,7 +218,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Typora的使用"></span>
+            <span id="subtitle" data-typed-text="苍穹外卖学习笔记——新增员工需求"></span>
           
         </div>
 
@@ -227,8 +229,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-09-02 18:02" pubdate>
-          2024年9月2日 晚上
+        <time datetime="2024-09-25 20:17" pubdate>
+          2024年9月25日 晚上
         </time>
       </span>
     
@@ -239,7 +241,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          315 字
+          863 字
         
       </span>
     
@@ -250,7 +252,7 @@
         
         
         
-          3 分钟
+          8 分钟
         
       </span>
     
@@ -296,48 +298,59 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Typora的使用</h1>
+            <h1 id="seo-header">苍穹外卖学习笔记——新增员工需求</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>不会用Typora所以用Typora写篇学习Typora的笔记（？）</p>
-<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>一级标题：Ctrl+1 或# </p>
-<p>二级标题：Ctrl+2 或##</p>
-<p>三级标题：Ctrl+3 或###</p>
-<p>四级标题：Ctrl+4 或####</p>
-<p>五级标题：Ctrl+5 或#####</p>
-<p>六级标题：Ctrl+6 或######</p>
-<p>注意：#后面要加一个空格键</p>
-<h2 id="文字"><a href="#文字" class="headerlink" title="文字"></a>文字</h2><p>删除线：alt+shift+5</p>
-<p>加粗：ctrl+B</p>
-<p>斜体：ctrl+I</p>
-<p>下划线：ctrl+U</p>
-<p>高亮：&#x3D;&#x3D; &#x3D;&#x3D;</p>
-<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><p>“|”作竖线 “-”作横线</p>
-<p>快捷键：ctrl + T</p>
-<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><p>这是&gt;一级引用   这是&gt;&gt; 二级引用</p>
-<p>快捷键：ctrl shift+q</p>
-<p>注意：&gt;后面要加一个空格键 引用必须位于一行的开头</p>
-<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><p>“-” + “空格键”</p>
-<p>快捷键：ctrl+shift+]  </p>
-<h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h3><p>“数字.” + “空格键”</p>
-<p>快捷键：ctrl+shift+[ </p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><h3 id="不确定语言"><a href="#不确定语言" class="headerlink" title="不确定语言"></a>不确定语言</h3><p>ctrl+shift+k</p>
-<h3 id="确定语言"><a href="#确定语言" class="headerlink" title="确定语言"></a>确定语言</h3><p>`&#96;&#96; 语言名称</p>
-<h2 id="跳转"><a href="#跳转" class="headerlink" title="跳转"></a>跳转</h2><h3 id="内部跳转–文件内跳转"><a href="#内部跳转–文件内跳转" class="headerlink" title="内部跳转–文件内跳转"></a>内部跳转–文件内跳转</h3><figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs scss"><span class="hljs-selector-attr">[提示文字]</span>(#路径) 如：<span class="hljs-selector-attr">[跳转到引用]</span>(#/image)<br>快捷键：CTRL+K<br></code></pre></td></tr></table></figure>
+                <h2 id="1-需求分析与接口设计"><a href="#1-需求分析与接口设计" class="headerlink" title="1.需求分析与接口设计"></a>1.需求分析与接口设计</h2><p>产品原型：</p>
+<p><img src="https://s2.loli.net/2024/09/26/NJpuYyg6zkFVW8f.png" srcset="/img/loading.gif" lazyload alt="需求分析"></p>
+<p>接口设计：</p>
+<p><img src="https://s2.loli.net/2024/09/26/RneTdbjJEGf5paw.png" srcset="/img/loading.gif" lazyload alt="接口设计"></p>
+<p>数据库设计：</p>
+<p><img src="https://s2.loli.net/2024/09/26/FcMnPOGILyuN7m3.png" srcset="/img/loading.gif" lazyload alt="数据库设计"></p>
+<h2 id="2-代码开发"><a href="#2-代码开发" class="headerlink" title="2.代码开发"></a>2.代码开发</h2><p>1.当前端传过来的数据跟我们已有的pojo的参数属性差别较大时，可以使用专门的DTO用来接收前端传过来的数据（此处资料中已提供，无需自行创建）</p>
+<p>2.编写添加员工的Controller方法：在EmployeeController中新建一个方法save，传入参数employeeDTO来接收数据</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@PostMapping</span><span class="hljs-comment">//post方式请求</span><br><span class="hljs-meta">@ApiOperation(&quot;新增员工&quot;)</span><br><span class="hljs-keyword">public</span> Result <span class="hljs-title function_">save</span><span class="hljs-params">(<span class="hljs-meta">@RequestBody</span> EmployeeDTO employeeDTO)</span>&#123; <br>      log.info(<span class="hljs-string">&quot;新增员工：&#123;&#125;&quot;</span>,employeeDTO);<br>      employeeService.save(employeeDTO);<br>      <span class="hljs-keyword">return</span> Result.success();<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>1.前端使用post方式，所以加@PostMapping注解</p>
+<p>2.前端传过来的数据类型是json，所以使用@RequestBody注解</p>
+</blockquote>
+<br/>
+
+<p>3.编写Service接口和Impl类:创建一个emloyee实体类，然后把DTO的数据拷贝到实体类中，然后对剩下的属性进行赋值。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">save</span><span class="hljs-params">(EmployeeDTO employeeDTO)</span>&#123;<br>    <span class="hljs-type">Employee</span> <span class="hljs-variable">employee</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Employee</span>();<br>    BeanUtils.copyProperties(employeeDTO,employee);<span class="hljs-comment">//对象属性拷贝</span><br>    employee.setStatus(StatusConstant.ENABLE);<br>    employee.setPassword(DigestUtils.md5DigestAsHex(PasswordConstant.DEFAULT_PASSWORD.getBytes()));<br>    employee.setCreateTime(LocalDateTime.now());<br>    employee.setUpdateTime(LocalDateTime.now());<br>    employee.setCreateUser(<span class="hljs-number">10L</span>); <span class="hljs-comment">//TODO 后续需要改为当前登录用户的id</span><br>    employee.setUpdateUser(<span class="hljs-number">10L</span>);<br>    employeeMapper.insert(employee);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>1.可以用BeanUtils工具类中的copyProperties方法来对对象进行拷贝</p>
+<p>3.使用StatusConstant常量类让代码更灵活优雅</p>
+</blockquote>
+ <br/>
+
+<p>4.编写Mapper接口：直接使用注解编写SQL来将数据插入数据库</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Insert(&quot;insert into employee(name,username,password,phone,sex,id_number,status,create_time,update_time,create_user,update_user)&quot;+</span><br><span class="hljs-meta">    &quot;values&quot;+</span><br><span class="hljs-meta">    &quot;(#(name),#(username),#(password),#(phone),#(sex),#(idNumber),#(status),#(createTime),#(updateTime),#(createUser),#(updateUser))&quot;)</span><br><span class="hljs-keyword">void</span> <span class="hljs-title function_">insert</span><span class="hljs-params">(Employee employee)</span>;<br></code></pre></td></tr></table></figure>
 
 
 
-<h3 id="外部跳转–超链接"><a href="#外部跳转–超链接" class="headerlink" title="外部跳转–超链接"></a>外部跳转–超链接</h3><figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs scss"><span class="hljs-selector-attr">[提示文字]</span>(网址) 如：<span class="hljs-selector-attr">[百度]</span>(baidu.com)<br> 快捷键：CTRL+K<br></code></pre></td></tr></table></figure>
+<h2 id="3-功能测试"><a href="#3-功能测试" class="headerlink" title="3. 功能测试"></a>3. 功能测试</h2><p>1.使用Swagger接口文档进行测试</p>
+<p>2.因为有JWT，所以没有登录不能添加数据</p>
+<p>3.先在接口文档中调用登录方法，获得一个令牌</p>
+<p>4.然后点击全局参数设置-输入参数名称+参数值</p>
+<p>5.带着参数值发送即可成功在数据库中添加数据</p>
+<h2 id="4-代码完善"><a href="#4-代码完善" class="headerlink" title="4. 代码完善"></a>4. 代码完善</h2><h3 id="问题1：录入的用户名已存在时，抛出异常后没有处理"><a href="#问题1：录入的用户名已存在时，抛出异常后没有处理" class="headerlink" title="问题1：录入的用户名已存在时，抛出异常后没有处理"></a>问题1：录入的用户名已存在时，抛出异常后没有处理</h3><p>在全局的异常处理器sky-server&#x2F;handler&#x2F;GlobalExceptionHandler中，创建exceptionHandler方法，在方法里添加如下代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@ExceptionHandler</span><br>    <span class="hljs-keyword">public</span> Result <span class="hljs-title function_">exceptionHandler</span><span class="hljs-params">(SQLIntegrityConstraintViolationException ex)</span> &#123;<br>        <span class="hljs-type">String</span> <span class="hljs-variable">message</span> <span class="hljs-operator">=</span> ex.getMessage();<br>        <span class="hljs-comment">//判断异常信息【控制台：后面的部分】是否包含Duplicate entry</span><br>		<span class="hljs-comment">//如果包含说明添加的数据已经存在</span><br>		<span class="hljs-comment">//错误信息的第三部分即为已存在的username</span><br>		<span class="hljs-comment">//故将错误信息拼接起来返回</span><br>        <span class="hljs-keyword">if</span>(message.contains(<span class="hljs-string">&quot;Duplicate entry&quot;</span>))&#123;<br>            String[] split = message.split(<span class="hljs-string">&quot; &quot;</span>);<br>            <span class="hljs-type">String</span> <span class="hljs-variable">username</span> <span class="hljs-operator">=</span> split[<span class="hljs-number">2</span>];<br>            <span class="hljs-type">String</span> <span class="hljs-variable">msg</span> <span class="hljs-operator">=</span> username + MessageConstant.ALREADY_EXISTS;<br>            <span class="hljs-keyword">return</span> Result.error(msg);<br>        &#125;<span class="hljs-keyword">else</span>&#123;<br>            <span class="hljs-keyword">return</span> Result.error(MessageConstant.UNKNOWN_ERROR);<br>        &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 
 
-<h2 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h2><p>使用<code>&lt;&gt;</code>包括URL或邮箱地址会被自动转换为超链接</p>
-<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs scss">!<span class="hljs-selector-attr">[提示文字]</span>(图片地址) <br></code></pre></td></tr></table></figure>
-
-<p>相对路径和绝对路径均可</p>
-<h2 id="表情😉"><a href="#表情😉" class="headerlink" title="表情😉"></a>表情😉</h2><p>快捷键：“windows” + “;”</p>
+<h3 id="问题2：创建人id没有正确处理"><a href="#问题2：创建人id没有正确处理" class="headerlink" title="问题2：创建人id没有正确处理"></a>问题2：创建人id没有正确处理</h3><blockquote>
+<p>JWT认证机制：用户发起请求发送用户名和密码，后端进行校验，如果验证通过就生成JWT Token，将Token返回给客户端，客户端会保存Token，在后续请求的请求头中都会携带JWT Token，请求会被拦截器拦截到，会检查Token，如果通过就会展示数据，如果没有通过就会返回错误信息。</p>
+<p><img src="https://s2.loli.net/2024/09/26/jYhmNraLtC4ow1l.png" srcset="/img/loading.gif" lazyload alt="JWT认证机制"></p>
+<p>ThreadLocal:它是Thread的局部变量，为每个线程提供单独一份的存储空间，具有线程隔离的效果，只有在线程内才能获取到对应的值，在线程外则不能访问。</p>
+</blockquote>
+<p>由此可知，我们可以先在拦截器JwtTokenAdminInterceptor里将ID存到存储空间里（set），因为每次请求线程不变，所以存储空间的值不会被更改，因此可以在EmployeeServiceImpl类中取到该值（get），进而输出。</p>
+<p><img src="https://s2.loli.net/2024/09/26/rDl4ostyJaLqweO.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<p><img src="https://s2.loli.net/2024/09/26/hY3HrwyjCtaE9cd.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
 
                 
               </div>
@@ -356,7 +369,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/" class="category-chain-item">杂七杂八</a>
+  <a href="/categories/%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/" class="category-chain-item">项目实战</a>
   
   
 
@@ -371,7 +384,11 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Typora/" class="print-no-link">#Typora</a>
+        <a href="/tags/%E8%8B%8D%E7%A9%B9%E5%A4%96%E5%8D%96/" class="print-no-link">#苍穹外卖</a>
+      
+        <a href="/tags/java/" class="print-no-link">#java</a>
+      
+        <a href="/tags/springboot/" class="print-no-link">#springboot</a>
       
     </div>
   
@@ -383,8 +400,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Typora的使用</div>
-      <div>http://example.com/2024/09/02/Typora的使用/</div>
+      <div>苍穹外卖学习笔记——新增员工需求</div>
+      <div>http://example.com/2024/09/25/苍穹外卖Day02学习笔记/</div>
     </div>
     <div class="license-meta">
       
@@ -396,7 +413,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年9月2日</div>
+          <div>2024年9月25日</div>
         </div>
       
       
@@ -428,18 +445,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/09/25/%E8%8B%8D%E7%A9%B9%E5%A4%96%E5%8D%96Day02%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="苍穹外卖学习笔记——新增员工需求">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">苍穹外卖学习笔记——新增员工需求</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/08/29/My-First-Blog/" title="My First Blog">
-                        <span class="hidden-mobile">My First Blog</span>
+                      <a href="/2024/09/02/Typora%E7%9A%84%E4%BD%BF%E7%94%A8/" title="Typora的使用">
+                        <span class="hidden-mobile">Typora的使用</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
