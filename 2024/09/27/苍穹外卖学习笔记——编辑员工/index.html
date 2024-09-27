@@ -19,28 +19,30 @@
   <meta name="author" content="SphiinX">
   <meta name="keywords" content="">
   
-    <meta name="description" content="需求分析与接口设计产品原型：     接口设计：  {status}是路径参数，1为启用，0为禁用。地址栏传参传入员工id。 代码开发1.在EmployeeController中添加一个方法： 1234567@PostMapping(&quot;&#x2F;status&#x2F;&#123;status&#125;&quot;)    @ApiOperation(&quot;启用禁用员工账号&quot;)    p">
+    <meta name="description" content="需求分析与接口设计产品原型：  接口设计：  点击编辑后，会发送get请求，请求参数id直接在地址框中，后端根据id查询员工信息，然后将员工信息以json形式响应，前端接收到后将数据回显到表单中，供用户修改。     2.用户保存后又发送给后端，后端保存完成后给界面响应，前端根据响应结果进行相关处理  代码开发回显数据1.在EmployeeController添加一个方法： 123456 @Get">
 <meta property="og:type" content="article">
-<meta property="og:title" content="苍穹外卖学习笔记——启禁员工账号">
-<meta property="og:url" content="http://example.com/2024/09/27/%E8%8B%8D%E7%A9%B9%E5%A4%96%E5%8D%96%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E5%90%AF%E7%A6%81%E5%91%98%E5%B7%A5%E8%B4%A6%E5%8F%B7/index.html">
+<meta property="og:title" content="苍穹外卖学习笔记——编辑员工">
+<meta property="og:url" content="http://example.com/2024/09/27/%E8%8B%8D%E7%A9%B9%E5%A4%96%E5%8D%96%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E7%BC%96%E8%BE%91%E5%91%98%E5%B7%A5/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="需求分析与接口设计产品原型：     接口设计：  {status}是路径参数，1为启用，0为禁用。地址栏传参传入员工id。 代码开发1.在EmployeeController中添加一个方法： 1234567@PostMapping(&quot;&#x2F;status&#x2F;&#123;status&#125;&quot;)    @ApiOperation(&quot;启用禁用员工账号&quot;)    p">
+<meta property="og:description" content="需求分析与接口设计产品原型：  接口设计：  点击编辑后，会发送get请求，请求参数id直接在地址框中，后端根据id查询员工信息，然后将员工信息以json形式响应，前端接收到后将数据回显到表单中，供用户修改。     2.用户保存后又发送给后端，后端保存完成后给界面响应，前端根据响应结果进行相关处理  代码开发回显数据1.在EmployeeController添加一个方法： 123456 @Get">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://s2.loli.net/2024/09/27/oBdZsxPEmSCI6a3.jpg">
-<meta property="article:published_time" content="2024-09-27T02:39:54.000Z">
-<meta property="article:modified_time" content="2024-09-27T03:39:34.888Z">
+<meta property="og:image" content="https://s2.loli.net/2024/09/27/G4zK3sEiMjbNaXt.png">
+<meta property="og:image" content="https://s2.loli.net/2024/09/27/H4UB6YcVqXuhFQ7.png">
+<meta property="og:image" content="https://s2.loli.net/2024/09/27/4XqgWjIvHarsZkS.png">
+<meta property="article:published_time" content="2024-09-27T10:57:09.000Z">
+<meta property="article:modified_time" content="2024-09-27T12:33:25.253Z">
 <meta property="article:author" content="SphiinX">
 <meta property="article:tag" content="苍穹外卖">
 <meta property="article:tag" content="java">
 <meta property="article:tag" content="springboot">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://s2.loli.net/2024/09/27/oBdZsxPEmSCI6a3.jpg">
+<meta name="twitter:image" content="https://s2.loli.net/2024/09/27/G4zK3sEiMjbNaXt.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>苍穹外卖学习笔记——启禁员工账号 - Hexo</title>
+  <title>苍穹外卖学习笔记——编辑员工 - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -218,7 +220,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="苍穹外卖学习笔记——启禁员工账号"></span>
+            <span id="subtitle" data-typed-text="苍穹外卖学习笔记——编辑员工"></span>
           
         </div>
 
@@ -229,8 +231,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-09-27 10:39" pubdate>
-          2024年9月27日 上午
+        <time datetime="2024-09-27 18:57" pubdate>
+          2024年9月27日 晚上
         </time>
       </span>
     
@@ -241,7 +243,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          437 字
+          368 字
         
       </span>
     
@@ -298,50 +300,62 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">苍穹外卖学习笔记——启禁员工账号</h1>
+            <h1 id="seo-header">苍穹外卖学习笔记——编辑员工</h1>
             
             
               <div class="markdown-body">
                 
                 <h1 id="需求分析与接口设计"><a href="#需求分析与接口设计" class="headerlink" title="需求分析与接口设计"></a>需求分析与接口设计</h1><p>产品原型：</p>
-<img src="https://s2.loli.net/2024/09/27/cHk1jmPBNbSWhnw.png" srcset="/img/loading.gif" lazyload style="zoom:60%;" />
-
-
-
+<p><img src="https://s2.loli.net/2024/09/27/G4zK3sEiMjbNaXt.png" srcset="/img/loading.gif" lazyload></p>
 <p>接口设计：</p>
-<p><img src="https://s2.loli.net/2024/09/27/xYZWjin9lXA8Vfm.png" srcset="/img/loading.gif" lazyload></p>
-<p>{status}是路径参数，1为启用，0为禁用。地址栏传参传入员工id。</p>
-<h1 id="代码开发"><a href="#代码开发" class="headerlink" title="代码开发"></a>代码开发</h1><p>1.在EmployeeController中添加一个方法：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@PostMapping(&quot;/status/&#123;status&#125;&quot;)</span><br>    <span class="hljs-meta">@ApiOperation(&quot;启用禁用员工账号&quot;)</span><br>    <span class="hljs-keyword">public</span> Result <span class="hljs-title function_">startOrStop</span><span class="hljs-params">(<span class="hljs-meta">@PathVariable</span> Integer status,Long id)</span>&#123;<br>        log.info(<span class="hljs-string">&quot;启用禁用员工账号：&#123;&#125;,&#123;&#125;&quot;</span>,status,id);<br>        employeeService.startOrStop(status,id);<br>        <span class="hljs-keyword">return</span> Result.success();<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<blockquote>
 <ol>
-<li>请求参数status是根据路径传过来的，加注解@PathVariable，如果和路径参数不同名，就要加括号双引号指明取的是哪个路径参数@PathVariable(“status”) ；如果同名，就不用加。</li>
-<li>请求参数id是query方法直接拼接到地址栏的，可以直接注入</li>
+<li>点击编辑后，会发送get请求，请求参数id直接在地址框中，后端根据id查询员工信息，然后将员工信息以json形式响应，前端接收到后将数据回显到表单中，供用户修改。</li>
 </ol>
-</blockquote>
+<p><img src="https://s2.loli.net/2024/09/27/H4UB6YcVqXuhFQ7.png" srcset="/img/loading.gif" lazyload></p>
+<br/>
+
+<p>2.用户保存后又发送给后端，后端保存完成后给界面响应，前端根据响应结果进行相关处理</p>
+<p><img src="https://s2.loli.net/2024/09/27/4XqgWjIvHarsZkS.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="代码开发"><a href="#代码开发" class="headerlink" title="代码开发"></a>代码开发</h1><h2 id="回显数据"><a href="#回显数据" class="headerlink" title="回显数据"></a>回显数据</h2><p>1.在EmployeeController添加一个方法：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java"> <span class="hljs-meta">@GetMapping(&quot;/&#123;id&#125;&quot;)</span><br>    <span class="hljs-meta">@ApiOperation(&quot;根据id查询员工信息&quot;)</span><br>    <span class="hljs-keyword">public</span> Result&lt;Employee&gt; <span class="hljs-title function_">getById</span><span class="hljs-params">(<span class="hljs-meta">@PathVariable</span> Long id)</span>&#123;<br>        <span class="hljs-type">Employee</span> <span class="hljs-variable">employee</span> <span class="hljs-operator">=</span> employeeService.getById(id);<br>        <span class="hljs-keyword">return</span> Result.success(employee);<br>&#125;<br></code></pre></td></tr></table></figure>
+
 <br/>
 
 <p>2.在EmployeeService接口中编写方法：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//启用禁用员工账号</span><br><span class="hljs-keyword">void</span> <span class="hljs-title function_">startOrStop</span><span class="hljs-params">(Integer status, Long id)</span>;<br></code></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//根据id查询员工</span><br>Employee <span class="hljs-title function_">getById</span><span class="hljs-params">(Long id)</span>;<br></code></pre></td></tr></table></figure>
 
 <br/>
 
-<p>3.在EmployeeServiceImpl类中实现方法：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Override</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">startOrStop</span><span class="hljs-params">(Integer status, Long id)</span> &#123;<br>        <span class="hljs-comment">//update employee set status = ? where id = ?</span><br>       <span class="hljs-comment">/* Employee employee = new Employee();</span><br><span class="hljs-comment">        employee.setStatus(status);</span><br><span class="hljs-comment">        employee.setId(id); */</span><br>        <span class="hljs-type">Employee</span> <span class="hljs-variable">employee</span> <span class="hljs-operator">=</span> Employee.builder()<br>                .status(status)<br>                .id(id)<br>                .build();<br>        employeeMapper.update(employee);<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>3.在EmployeeServiceImpl中实现方法：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Override</span><br>    <span class="hljs-keyword">public</span> Employee <span class="hljs-title function_">getById</span><span class="hljs-params">(Long id)</span> &#123;<br>        <span class="hljs-type">Employee</span> <span class="hljs-variable">employee</span> <span class="hljs-operator">=</span> employeeMapper.getById(id);<br>        employee.setPassword(<span class="hljs-string">&quot;****&quot;</span>);<br>        <span class="hljs-keyword">return</span> employee;<br>    &#125;<br></code></pre></td></tr></table></figure>
 
 <br/>
 
-<p>4.在EmployeeMapper中编写方法：</p>
+<p>4.EmployeeMapper中编写方法：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//根据id查询员工信息</span><br><span class="hljs-meta">@Select(&quot;select * from employee where id = #&#123;id&#125;&quot;)</span><br>Employee <span class="hljs-title function_">getById</span><span class="hljs-params">(Long id)</span>;<br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="保存修改后的数据"><a href="#保存修改后的数据" class="headerlink" title="保存修改后的数据"></a>保存修改后的数据</h2><p>1.在EmployeeController中添加方法：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@PutMapping</span><br><span class="hljs-meta">@ApiOperation(&quot;编辑员工信息&quot;)</span><br><span class="hljs-keyword">public</span> Result <span class="hljs-title function_">update</span><span class="hljs-params">(<span class="hljs-meta">@RequestBody</span> EmployeeDTO employeeDTO)</span>&#123;<br>     log.info(<span class="hljs-string">&quot;编辑员工信息：&#123;&#125;&quot;</span>,employeeDTO);<br>     employeeService.update(employeeDTO);<br>     <span class="hljs-keyword">return</span> Result.success();<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<br/>
+
+<p>2.在EmployeeService接口中编写方法：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//编辑员工信息</span><br><span class="hljs-keyword">void</span> <span class="hljs-title function_">update</span><span class="hljs-params">(EmployeeDTO employeeDTO)</span>;<br></code></pre></td></tr></table></figure>
+
+<br/>
+
+<p>3.在EmployeeServiceImpl中实现方法：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Override</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">update</span><span class="hljs-params">(EmployeeDTO employeeDTO)</span> &#123;<br>    <span class="hljs-type">Employee</span> <span class="hljs-variable">employee</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Employee</span>();<br>    BeanUtils.copyProperties(employeeDTO,employee); <span class="hljs-comment">//属性拷贝</span><br>    employee.setUpdateTime(LocalDateTime.now());<br>    employee.setUpdateUser(BaseContext.getCurrentId());<br>    employeeMapper.update(employee); <span class="hljs-comment">//需要传入Employee参数</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<br/>
+
+<p>4.EmployeeMapper中编写方法：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">void</span> <span class="hljs-title function_">update</span><span class="hljs-params">(Employee employee)</span>;<br></code></pre></td></tr></table></figure>
 
-<br/>
-
-<p>5.在EmployeeMapper.xml中编写SQL语句:</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">update</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;update&quot;</span> <span class="hljs-attr">parameterType</span>=<span class="hljs-string">&quot;Employee&quot;</span>&gt;</span><br>        update employee<br>        <span class="hljs-tag">&lt;<span class="hljs-name">set</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">if</span> <span class="hljs-attr">test</span>=<span class="hljs-string">&quot;name != null&quot;</span>&gt;</span> name = #&#123;name&#125;,<span class="hljs-tag">&lt;/<span class="hljs-name">if</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">if</span> <span class="hljs-attr">test</span>=<span class="hljs-string">&quot;username != null&quot;</span>&gt;</span> username = #&#123;username&#125;,<span class="hljs-tag">&lt;/<span class="hljs-name">if</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">if</span> <span class="hljs-attr">test</span>=<span class="hljs-string">&quot;password != null&quot;</span>&gt;</span> password = #&#123;password&#125;,<span class="hljs-tag">&lt;/<span class="hljs-name">if</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">if</span> <span class="hljs-attr">test</span>=<span class="hljs-string">&quot;phone != null&quot;</span>&gt;</span> phone = #&#123;phone&#125;,<span class="hljs-tag">&lt;/<span class="hljs-name">if</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">if</span> <span class="hljs-attr">test</span>=<span class="hljs-string">&quot;sex != null&quot;</span>&gt;</span> sex = #&#123;sex&#125;,<span class="hljs-tag">&lt;/<span class="hljs-name">if</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">if</span> <span class="hljs-attr">test</span>=<span class="hljs-string">&quot;idNumber != null&quot;</span>&gt;</span> id_Number = #&#123;idNumber&#125;,<span class="hljs-tag">&lt;/<span class="hljs-name">if</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">if</span> <span class="hljs-attr">test</span>=<span class="hljs-string">&quot;updateTime != null&quot;</span>&gt;</span> update_Time = #&#123;updateTime&#125;,<span class="hljs-tag">&lt;/<span class="hljs-name">if</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">if</span> <span class="hljs-attr">test</span>=<span class="hljs-string">&quot;updateUser != null&quot;</span>&gt;</span> update_User = #&#123;updateUser&#125;,<span class="hljs-tag">&lt;/<span class="hljs-name">if</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">if</span> <span class="hljs-attr">test</span>=<span class="hljs-string">&quot;status != null&quot;</span>&gt;</span> status = #&#123;status&#125;,<span class="hljs-tag">&lt;/<span class="hljs-name">if</span>&gt;</span><br>        <span class="hljs-tag">&lt;/<span class="hljs-name">set</span>&gt;</span><br>        where id = #&#123;id&#125;<br>    <span class="hljs-tag">&lt;/<span class="hljs-name">update</span>&gt;</span><br></code></pre></td></tr></table></figure>
-
 <blockquote>
-<p>使用动态SQL实现对所有字段的修改，提高代码的复用性</p>
+<p>调用之前写的update方法</p>
 </blockquote>
 
                 
@@ -392,8 +406,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>苍穹外卖学习笔记——启禁员工账号</div>
-      <div>http://example.com/2024/09/27/苍穹外卖学习笔记——启禁员工账号/</div>
+      <div>苍穹外卖学习笔记——编辑员工</div>
+      <div>http://example.com/2024/09/27/苍穹外卖学习笔记——编辑员工/</div>
     </div>
     <div class="license-meta">
       
@@ -437,18 +451,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/09/27/%E8%8B%8D%E7%A9%B9%E5%A4%96%E5%8D%96%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E7%BC%96%E8%BE%91%E5%91%98%E5%B7%A5/" title="苍穹外卖学习笔记——编辑员工">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">苍穹外卖学习笔记——编辑员工</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/09/26/%E8%8B%8D%E7%A9%B9%E5%A4%96%E5%8D%96%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E5%91%98%E5%B7%A5%E5%88%86%E9%A1%B5%E6%9F%A5%E8%AF%A2%E9%9C%80%E6%B1%82/" title="苍穹外卖学习笔记——员工分页查询">
-                        <span class="hidden-mobile">苍穹外卖学习笔记——员工分页查询</span>
+                      <a href="/2024/09/27/%E8%8B%8D%E7%A9%B9%E5%A4%96%E5%8D%96%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E5%90%AF%E7%A6%81%E5%91%98%E5%B7%A5%E8%B4%A6%E5%8F%B7/" title="苍穹外卖学习笔记——启禁员工账号">
+                        <span class="hidden-mobile">苍穹外卖学习笔记——启禁员工账号</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
