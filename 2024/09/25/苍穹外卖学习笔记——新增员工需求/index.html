@@ -28,7 +28,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://s2.loli.net/2024/09/26/HkcgrVuz1vAe9LC.jpg">
 <meta property="article:published_time" content="2024-09-25T12:17:52.000Z">
-<meta property="article:modified_time" content="2024-09-26T08:05:12.721Z">
+<meta property="article:modified_time" content="2024-09-26T10:08:53.527Z">
 <meta property="article:author" content="SphiinX">
 <meta property="article:tag" content="苍穹外卖">
 <meta property="article:tag" content="java">
@@ -314,7 +314,7 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@PostMapping</span><span class="hljs-comment">//post方式请求</span><br><span class="hljs-meta">@ApiOperation(&quot;新增员工&quot;)</span><br><span class="hljs-keyword">public</span> Result <span class="hljs-title function_">save</span><span class="hljs-params">(<span class="hljs-meta">@RequestBody</span> EmployeeDTO employeeDTO)</span>&#123; <br>      log.info(<span class="hljs-string">&quot;新增员工：&#123;&#125;&quot;</span>,employeeDTO);<br>      employeeService.save(employeeDTO);<br>      <span class="hljs-keyword">return</span> Result.success();<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <blockquote>
-<p>1.前端使用post方式，所以加@PostMapping注解</p>
+<p>1.前端发送post请求，所以加@PostMapping注解</p>
 <p>2.前端传过来的数据类型是json，所以使用@RequestBody注解</p>
 </blockquote>
 <br/>
